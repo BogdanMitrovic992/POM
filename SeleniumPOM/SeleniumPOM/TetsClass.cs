@@ -32,13 +32,22 @@ public class TestClass
     {
 
         Login("execute", "automation");
+        _homePage.Initial.SendKeys("MB");
+        _homePage.Title("Mr.");
+        _homePage.FirstName.SendKeys("Bogdan");
+        _homePage.MiddleName.SendKeys("Mitrovic");
+        _homePage.Female.Click();
+        _homePage.Hindi.Click();
+        _homePage.SaveButton.Click();
+
+
     }
 
     [Test]
     public void TC02_OpenPopUp_ShouldDisplayed()
     {
         Login("execute", "automation");
-
+        _homePage.HtmlPopup.Click();
     
     }
 
@@ -47,7 +56,7 @@ public class TestClass
     public void TC03_OpenAlert_ShouldDisplayed()
     {
         Login("execute", "automation");
-
+        _homePage.Alert();
      
     }
 
